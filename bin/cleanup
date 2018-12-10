@@ -1,6 +1,8 @@
 #!/bin/sh
 
 sudo umount output/system
+sudo umount output/vendor
+sudo umount output/odm
 
 rm -rf output
 rm -rf tmp

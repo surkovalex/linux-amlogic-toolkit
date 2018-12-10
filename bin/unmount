@@ -1,7 +1,9 @@
 #!/bin/sh
 
-echo "Unmounting system image..."
+echo "Unmounting system, vendor, odm image..."
 sync
 sudo umount output/system
+sudo umount output/vendor
+sudo umount output/odm
 
 echo "Done"

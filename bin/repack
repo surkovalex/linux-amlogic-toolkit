@@ -9,6 +9,14 @@ then
         rm -f output/image/system.PARTITION
         bin/img2simg output/image/system.img output/image/system.PARTITION
 
+        echo "Converting back vendor.img to vendor.PARTITION..."
+        rm -f output/image/vendor.PARTITION
+        bin/img2simg output/image/vendor.img output/image/vendor.PARTITION
+
+        echo "Converting back odm.img to odm.PARTITION..."
+        rm -f output/image/odm.PARTITION
+        bin/img2simg output/image/odm.img output/image/odm.PARTITION
+
         echo "Repacking logo..."
         rm -f output/image/logo.PARTITION
         bin/logo_img_packer -r output/logo output/image/logo.PARTITION
